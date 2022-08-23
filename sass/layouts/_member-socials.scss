@@ -1,0 +1,33 @@
+.member-socials {
+  @include flex(flex, center, null, 10px);
+  
+  &__link {
+    @include flex(flex, center, center, null);
+    @include form(44px, 44px, 50%);
+    color: #afb1b8;
+    @include animation(background-color, color, null, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
+
+    &:hover,
+    &:focus {
+      background-color: var(--active-hover-focus-current);
+      color: #ffffff;
+    }
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+}
+
+/*another method for icon-hover*/
+
+/*.member-socials__link:hover,
+.member-socials__link:focus {
+  background-color: var(--active-hover-focus-current);
+}
+
+.member-socials__link:hover,
+.member-socials__link:focus,
+.member-socials__icon {
+  fill: #ffffff;
+}*/

@@ -1,0 +1,46 @@
+.conditions {
+  @include flex(flex, center, center, 7px);
+  margin-bottom: 30px;
+
+  &__label {
+    @include flex(flex, center, center, null);
+    @include fonts(null, 14px, 1.71, 0.03em, var(--text-color), null);
+  }
+
+  &__checkbox:focus-within + &__label span {
+    border: 2px solid var(--active-hover-focus-current);
+  }
+}
+
+.conditions__link {
+  text-decoration: none;
+  color: var(--active-hover-focus-current);
+  border-bottom: 1px solid var(--active-hover-focus-current);
+  line-height: 0.85;
+  @include animation(color, null, null, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
+
+  &:hover,
+  &:focus {
+    color: var(--hover-btn);
+  }
+}
+
+.custom-checkbox {
+  @include flex(flex, center, center, null);
+  @include form(16px, 15px, 2px);
+  margin-right: 7px;
+  border: 2px solid #000000;
+
+  &__icon {
+    fill: transparent;
+  }
+}
+
+.conditions__checkbox:checked + .conditions__label span {
+  background-color: var(--active-hover-focus-current);
+  border: none;
+}
+
+.conditions__checkbox:checked + .conditions__label .custom-checkbox__icon {
+  fill: #ffffff;
+}

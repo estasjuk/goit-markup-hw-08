@@ -1,0 +1,24 @@
+.feature {
+  @include flex(flex, null, null, 30px);
+
+  &__title {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    @include fonts(700, 14px, 1.14, 0.03em, var(--title-color), null);
+  }
+
+  &__item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+
+  &__icon {
+    @include flex(flex, center, center, null);
+    margin-bottom: 30px;
+    @include form(270px, 120px, 4px);
+    background-color: var(--secondary-background-color);
+  }
+
+  &__text {
+    @include fonts(null, 14px, 1.71, 0.03em, var(--text-color), null);
+  }
+}

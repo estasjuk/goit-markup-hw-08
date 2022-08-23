@@ -1,0 +1,22 @@
+.nav-menu {
+  @include flex(flex, null, null, 50px);
+  @include fonts(500, 14px, 1.14, 0.02em, null, null);
+
+  &__item {
+    position: relative;
+  }
+
+  &__link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: var(--title-color);
+    text-decoration: none;
+    @include animation(color, null, null, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
+
+    &:hover,
+    &:focus {
+      color: var(--active-hover-focus-current);
+    }
+  }
+}

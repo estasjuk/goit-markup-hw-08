@@ -1,0 +1,7 @@
+.head-container {
+  @include flex(flex, null, center, null);
+}
+
+.head-section {
+  border-bottom: 1px solid #ececec;
+}

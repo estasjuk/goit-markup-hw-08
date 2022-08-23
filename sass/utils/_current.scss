@@ -1,0 +1,12 @@
+.current {
+  color: var(--active-hover-focus-current);
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    @include form(100%, 4px, 2px);
+    background-color: var(--active-hover-focus-current);
+  }
+}

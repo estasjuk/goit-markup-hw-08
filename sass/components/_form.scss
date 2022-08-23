@@ -1,0 +1,11 @@
+.form {
+  &__field {
+    margin-bottom: 10px;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 4px;
+    @include fonts(null, 12px, 1.17, 0.01em, var(--text-color), null);
+  }
+}

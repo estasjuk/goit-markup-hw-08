@@ -1,0 +1,30 @@
+.mailing {
+  display: block;
+  margin-bottom: 20px;
+  @include fonts(700, 14px, 1.14, 0.03em, var(--sec-text-color), null);
+  text-transform: uppercase;
+}
+
+.mailing-form {
+  @include flex(flex, null, null, 12px);
+
+  &__input {
+    @include form(358px, 50px, 4px);
+    padding: 15px 295px 15px 15px;
+    background-color: #2f303a;
+    font-style: normal;
+    @include fonts(400, 16px, 1.25, 0.03em, var(--sec-text-color), null);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    outline: transparent;
+    @include animation(background-color, null, null, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
+
+    &::placeholder {
+      @include flex(flex, null, center, null);
+      @include fonts(null, 16px, 1.25, 0.03em, rgba(255, 255, 255, 0.6), null);
+    }
+    &:focus {
+      border: 1px solid #2196f3;
+    }
+  }
+}

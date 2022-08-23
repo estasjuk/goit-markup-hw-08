@@ -1,0 +1,27 @@
+.join {
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  @include fonts(700, 14px, 1.14, 0.03em, var(--sec-text-color), null);
+}
+
+.footer-socials {
+  @include flex(flex, center, null, 10px);
+  
+  &__link {
+    @include flex(flex, center, center, null);
+    @include form(44px, 44px, 50%);
+    background-color: rgba(201, 81, 81, 0.1);
+    color: #ffffff;
+    @include animation(background-color, null, null, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
+
+    &:hover,
+    &:focus {
+      background-color: var(--active-hover-focus-current);
+    }
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+}
