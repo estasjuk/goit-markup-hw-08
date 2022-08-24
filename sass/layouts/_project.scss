@@ -1,10 +1,14 @@
 .project {
   @include flex(flex, null, null, 30px);
   flex-wrap: wrap;
-  
+
   &__item {
     position: relative;
-    flex-basis: calc((100% - 60px) / 3);
+    flex-basis: 100%;
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 30px) / 2);
+    }
   }
 
   &__link {

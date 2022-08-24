@@ -4,7 +4,7 @@
 
   &__label {
     @include flex(flex, center, center, null);
-    @include fonts(null, 14px, 1.71, 0.03em, var(--text-color), null);
+    @include fonts(null, 12px, 1.17, 0.03em, var(--text-color), null);
   }
 
   &__checkbox:focus-within + &__label span {

@@ -1,34 +1,35 @@
 .work {
-  padding-top: 0;
+  display: none;
+  // padding-top: 0;
 
-  &__title {
-    margin-bottom: 50px;
-    @include fonts(700, 36px, 1.17, 0.03em, var(--title-color), center);
-  }
+  // &__title {
+  //   margin-bottom: 50px;
+  //   @include fonts(700, 36px, 1.17, 0.03em, var(--title-color), center);
+  // }
 }
 
-.project-list {
-  @include flex(flex, null, null, 30px);
+// .project-list {
+//   @include flex(flex, null, null, 30px);
 
-  &__item {
-    position: relative;
-    flex-basis: calc((100% - 60px) / 3);
-  }
+//   &__item {
+//     position: relative;
+//     flex-basis: calc((100% - 60px) / 3);
+//   }
 
-  &__foto {
-    position: relative;
-  }
+//   &__foto {
+//     position: relative;
+//   }
 
-  &__text {
-    @include fonts(700, 14px, 1.14, 0.03em, var(--sec-text-color), center);
-    text-transform: uppercase;
-  }
+//   &__text {
+//     @include fonts(700, 14px, 1.14, 0.03em, var(--sec-text-color), center);
+//     text-transform: uppercase;
+//   }
 
-  &__description {
-    position: absolute;
-    bottom: 0;
-    @include flex(flex, center, center, null);
-    @include form(100%, 24%, null);
-    background-color: rgba(47, 48, 58, 0.8);
-  }
-}
+//   &__description {
+//     position: absolute;
+//     bottom: 0;
+//     @include flex(flex, center, center, null);
+//     @include form(100%, 24%, null);
+//     background-color: rgba(47, 48, 58, 0.8);
+//   }
+// }

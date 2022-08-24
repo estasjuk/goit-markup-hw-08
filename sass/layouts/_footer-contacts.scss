@@ -6,7 +6,7 @@
   }
 
   &__link {
-    @include fonts(null, 14px, 1.71, 0.03em, null, null);
+    @include fonts(null, 14px, 1.71, 0.03em, center, null);
     text-decoration: none;
     @include animation(color, null, null, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
 
@@ -27,5 +27,6 @@
 }
 
 .address {
+  text-align: center;
   margin-top: 10px;
 }

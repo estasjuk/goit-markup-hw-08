@@ -7,10 +7,19 @@
 
 .clients-list {
   @include flex(flex, null, null, 30px);
-  
+  flex-wrap: wrap;
+
+  &__item {
+    width: calc((100% - 30px) / 2);
+
+    @media screen and(min-width: 768px) {
+      width: calc((100% - 60px) / 3);
+    }
+  }
+
   &__link {
     @include flex(flex, center, center, null);
-    @include form(170px, 92px, 4px);
+    @include form(100%, 92px, 4px);
     outline: transparent;
     color: #afb1b8;
     border: 1px solid #afb1b8;

@@ -1,13 +1,12 @@
 .join {
   display: block;
   text-transform: uppercase;
-  margin-bottom: 20px;
   @include fonts(700, 14px, 1.14, 0.03em, var(--sec-text-color), null);
 }
 
 .footer-socials {
   @include flex(flex, center, null, 10px);
-  
+
   &__link {
     @include flex(flex, center, center, null);
     @include form(44px, 44px, 50%);

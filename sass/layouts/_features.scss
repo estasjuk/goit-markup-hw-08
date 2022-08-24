@@ -1,20 +1,29 @@
 .feature {
   @include flex(flex, null, null, 30px);
+  flex-wrap: wrap;
+
+  @media screen and (min-width: 768px) {
+    @include flex(flex, null, null, null);
+  }
 
   &__title {
     margin-bottom: 10px;
     text-transform: uppercase;
-    @include fonts(700, 14px, 1.14, 0.03em, var(--title-color), null);
+    @include fonts(700, 14px, 1.14, 0.03em, var(--title-color), center);
   }
 
   &__item {
-    flex-basis: calc((100% - 90px) / 4);
+    flex-basis: 100%;
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 30px) / 2);
+    }
   }
 
   &__icon {
     @include flex(flex, center, center, null);
     margin-bottom: 30px;
-    @include form(270px, 120px, 4px);
+    @include form(100%, 120px, 4px);
     background-color: var(--secondary-background-color);
   }
 

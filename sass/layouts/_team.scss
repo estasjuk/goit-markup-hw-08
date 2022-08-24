@@ -9,27 +9,41 @@
 
 .member-list {
   @include flex(flex, null, null, 30px);
- 
+  flex-wrap: wrap;
+
+  @media screen and (min-width: 768px) {
+    @include flex(flex, null, null, null);
+  }
+
   &__item {
-    flex-basis: calc((100% - 60px) / 3);
+    flex-basis: 100%;
     background-color: var(--main-background-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-  }
-}
 
-.member {
-  padding-bottom: 30px;
-  padding-top: 30px;
-
-  &__title {
-    margin-bottom: 10px;
-    @include fonts(500, 16px, 1.19, 0.03em, var(--title-color), center);
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 30px) / 2);
+    }
   }
 
-  &__position {
-    margin-bottom: 16px;
-    @include fonts(null, 16px, 1.19, 0.03em, var(--text-color), center);
+  &__foto {
+    width: 100%;
+    height: auto;
+  }
+
+  .member {
+    padding-bottom: 30px;
+    padding-top: 30px;
+
+    &__title {
+      margin-bottom: 10px;
+      @include fonts(500, 16px, 1.19, 0.03em, var(--title-color), center);
+    }
+
+    &__position {
+      margin-bottom: 16px;
+      @include fonts(null, 16px, 1.19, 0.03em, var(--text-color), center);
+    }
   }
 }

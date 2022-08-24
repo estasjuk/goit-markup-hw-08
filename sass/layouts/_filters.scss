@@ -1,13 +1,14 @@
 .portfolio {
-  @include flex(flex, center, null, 8px);
-  margin-bottom: 50px;
+  @include flex(flex, null, null, 8px);
+  flex-wrap: wrap;
+  margin-bottom: 40px;
 
   &__filter {
     border-radius: 4px;
     padding-top: 6px;
     padding-bottom: 6px;
-    padding-left: 22px;
-    padding-right: 22px;
+    padding-left: 25px;
+    padding-right: 25px;
     border: none;
     font-family: inherit;
     background-color: var(--secondary-background-color);
