@@ -29,7 +29,10 @@
     &--left,
     &--middle {
       flex-basis: 50%;
-      margin-bottom: 60px;
+    }
+
+    &--right {
+      margin-top: 60px;
     }
   }
 }
