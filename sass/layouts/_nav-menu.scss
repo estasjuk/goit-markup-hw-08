@@ -2,6 +2,10 @@
   @include flex(flex, null, null, 50px);
   @include fonts(500, 14px, 1.14, 0.02em, null, null);
 
+  @media screen and(max-width: 767px) {
+    display: none;
+  }
+
   &__item {
     position: relative;
   }

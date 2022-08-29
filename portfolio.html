@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <!-- <header class="head-section">
+    <header class="head-section">
       <div class="container head-container">
         <a href="./index.html" class="logo logo-head" lang="en">
           Web<span class="logo--black">Studio</span>
@@ -49,8 +49,68 @@
             </a>
           </li>
         </ul>
+        <button type="button" class="menu-open">
+          <svg class="menu-open__icon" width="24" height="16">
+            <use href="./images/icons.svg#icon-menu_24px"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+      <div class="mob-menu is-hidden">
+        <div class="container mob-wrap">
+          <div class="mob-wrap--top">
+            <button type="button" class="menu-close">
+              <svg class="menu-close__icon" width="19" height="19">
+                <use href="./images/icons.svg#icon-close-button"></use>
+              </svg>
+            </button>
+            <nav>
+              <ul class="mob-nav list-item">
+                <li class="mob-nav__item">
+                  <a href="./index.html" class="mob-nav__link">Студия</a>
+                </li>
+                <li class="mob-nav__item">
+                  <a href="./portfolio.html" aria-current="page" class="mob-nav__link">Портфолио</a>
+                </li>
+                <li class="mob-nav__item">
+                  <a href="" class="mob-nav__link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="mob-wrap--bottom">
+            <ul class="mob-contacts list-item">
+              <li class="mob-contacts__item">
+                <a href="tel:+380961111111" class="mob-contacts__link mob-contacts__link--tel">
+                  +38&nbsp096&nbsp111&nbsp11&nbsp11
+                </a>
+              </li>
+              <li class="mob-contacts__item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="mob-contacts__link mob-contacts__link--mail"
+                >
+                  info@devstudio.com
+                </a>
+              </li>
+            </ul>
+            <ul class="mob-socials list-item">
+              <li class="mob-socials__item">
+                <a href="" class="mob-socials__link">Instagram</a>
+              </li>
+              <li class="mob-socials__item">
+                <a href="" class="mob-socials__link">Twitter</a>
+              </li>
+              <li class="mob-socials__item">
+                <a href="" class="mob-socials__link">Facebook</a>
+              </li>
+              <li class="mob-socials__item">
+                <a href="" class="mob-socials__link">Linkedin</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
     <main>
       <section class="section">
         <div class="container">
@@ -67,7 +127,28 @@
             <li class="project__item">
               <a href="" class="project__link">
                 <div class="project-card">
-                  <img src="./images/technokryak.jpg" alt="Технокряк" width="370" height="294" />
+                  <picture>
+                    <source
+                      srcset="./images/technokryak.jpg 1x, ./images/technokryak-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/technokryak-tablet.jpg    1x,
+                        ./images/technokryak-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/technokryak-mobile.jpg    1x,
+                        ./images/technokryak-mobile-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/technokryak.jpg" alt="Технокряк" />
+                  </picture>
+
                   <p class="project-card__text">
                     Ресурс предлагает комплексные решения с разным уровнем функционала и сервисов.
                     Все это позволит посетителю получить исчерпывающие сведения о компании или
@@ -83,12 +164,27 @@
             <li class="project__item">
               <a href="" class="project__link">
                 <div class="project-card">
-                  <img
-                    src="./images/new-orlean.jpg"
-                    alt="New Orlean vs Golden Star"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/new-orlean.jpg 1x, ./images/new-orlean-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/new-orlean-tablet.jpg    1x,
+                        ./images/new-orlean-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/new-orlean-mobile.jpg    1x,
+                        ./images/new-orlean-mobile-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/new-orlean.jpg" alt="New Orlean vs Golden Star" />
+                  </picture>
                   <p class="project-card__text">
                     Ресурс предлагает комплексные решения с разным уровнем функционала и сервисов.
                     Все это позволит посетителю получить исчерпывающие сведения о компании или
@@ -107,7 +203,21 @@
             <li class="project__item">
               <a href="" class="project__link">
                 <div class="project-card">
-                  <img src="./images/seafood.jpg" alt="Seafood" width="370" height="294" />
+                  <picture>
+                    <source
+                      srcset="./images/seafood.jpg 1x, ./images/seafood-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/seafood-tablet.jpg 1x, ./images/seafood-tablet-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/seafood.jpg 1x, ./images/seafood-mobile-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/seafood.jpg" alt="Ресторан Seafood" />
+                  </picture>
 
                   <p class="project-card__text">
                     Ресурс предлагает комплексные решения с разным уровнем функционала и сервисов.
@@ -120,21 +230,28 @@
                     Ресторан
                     <span lang="en">Seafood</span>
                   </h2>
-                  <p class="project-description__type">
-                    Приложение Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor,
-                    illum laudantium. Non quos optio blanditiis rerum id fugit impedit porro est,
-                    perspiciatis quae, at facilis eos harum nemo magnam, ex dolores tempore quas
-                    dolore vitae neque ea velit. Explicabo, error totam? Dicta commodi veritatis
-                    voluptatem porro! Nisi totam laudantium quibusdam.
-                  </p>
+                  <p class="project-description__type">Приложение</p>
                 </div>
               </a>
             </li>
             <li class="project__item">
               <a href="" class="project__link">
                 <div class="project-card">
-                  <img src="./images/prime.jpg" alt="Prime" width="370" height="294" />
-
+                  <picture>
+                    <source
+                      srcset="./images/prime.jpg 1x, ./images/prime-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/prime-tablet.jpg 1x, ./images/prime-tablet-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/prime.jpg 1x, ./images/prime-mobile-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/prime.jpg" alt="Проект Prime" />
+                  </picture>
                   <p class="project-card__text">
                     Ресурс предлагает комплексные решения с разным уровнем функционала и сервисов.
                     Все это позволит посетителю получить исчерпывающие сведения о компании или
@@ -153,8 +270,21 @@
             <li class="project__item">
               <a href="" class="project__link">
                 <div class="project-card">
-                  <img src="./images/boxes.jpg" alt="Boxes" width="370" height="294" />
-
+                  <picture>
+                    <source
+                      srcset="./images/boxes.jpg 1x, ./images/boxes-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/boxes-tablet.jpg 1x, ./images/boxes-tablet-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/boxes.jpg 1x, ./images/boxes-mobile-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/boxes.jpg" alt="Boxes" />
+                  </picture>
                   <p class="project-card__text">
                     Ресурс предлагает комплексные решения с разным уровнем функционала и сервисов.
                     Все это позволит посетителю получить исчерпывающие сведения о компании или
@@ -173,12 +303,24 @@
             <li class="project__item">
               <a href="" class="project__link">
                 <div class="project-card">
-                  <img
-                    src="./images/inspiration.jpg"
-                    alt="Inspiration has no Border"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/inspiration.jpg 1x, ./images/inspiration-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/inspiration-tablet.jpg    1x,
+                        ./images/inspiration-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/inspiration.jpg 1x, ./images/inspiration-mobile-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/inspiration.jpg" alt="Inspiration has no Borders" />
+                  </picture>
 
                   <p class="project-card__text">
                     Ресурс предлагает комплексные решения с разным уровнем функционала и сервисов.
@@ -195,13 +337,27 @@
             <li class="project__item">
               <a href="" class="project__link">
                 <div class="project-card">
-                  <img
-                    src="./images/limited-edition.jpg"
-                    alt="Limited Edition"
-                    width="370"
-                    height="294"
-                  />
-
+                  <picture>
+                    <source
+                      srcset="./images/limited-edition.jpg 1x, ./images/limited-edition-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/limited-edition-tablet.jpg    1x,
+                        ./images/limited-edition-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/limited-edition.jpg           1x,
+                        ./images/limited-edition-mobile-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/limited-edition.jpg" alt="Издание Limited Edition" />
+                  </picture>
                   <p class="project-card__text">
                     Ресурс предлагает комплексные решения с разным уровнем функционала и сервисов.
                     Все это позволит посетителю получить исчерпывающие сведения о компании или
@@ -220,8 +376,21 @@
             <li class="project__item">
               <a href="" class="project__link">
                 <div class="project-card">
-                  <img src="./images/lab.jpg" alt="LAB" width="370" height="294" />
-
+                  <picture>
+                    <source
+                      srcset="./images/lab.jpg 1x, ./images/lab-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/lab-tablet.jpg 1x, ./images/lab-tablet-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/lab-mobile.jpg 1x, ./images/lab-mobile-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/lab.jpg" alt="LAB" />
+                  </picture>
                   <p class="project-card__text">
                     Ресурс предлагает комплексные решения с разным уровнем функционала и сервисов.
                     Все это позволит посетителю получить исчерпывающие сведения о компании или
@@ -240,13 +409,27 @@
             <li class="project__item">
               <a href="" class="project__link">
                 <div class="project-card">
-                  <img
-                    src="./images/growing-business.jpg"
-                    alt="Growing Business"
-                    width="370"
-                    height="294"
-                  />
-
+                  <picture>
+                    <source
+                      srcset="./images/growing-business.jpg 1x, ./images/growing-business-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/growing-business-tablet.jpg    1x,
+                        ./images/growing-business-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/growing-business-mobile.jpg    1x,
+                        ./images/growing-business-mobile-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/growing-business.jpg" alt="Growing Business" />
+                  </picture>
                   <p class="project-card__text">
                     Ресурс предлагает комплексные решения с разным уровнем функционала и сервисов.
                     Все это позволит посетителю получить исчерпывающие сведения о компании или
@@ -264,7 +447,7 @@
       </section>
     </main>
     <footer class="foot-section">
-      <div class="foot-container">
+      <div class="container foot-container">
         <div class="foot-container--left">
           <a href="./index.html" class="logo logo-foot" lang="en">
             Web<span class="logo--white">Studio</span>
@@ -325,6 +508,7 @@
             </li>
           </ul>
         </div>
+
         <div class="foot-container--right">
           <strong class="mailing">подписывайтесь на рассылку</strong>
           <form class="mailing-form" name="mailing-form">
@@ -346,5 +530,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

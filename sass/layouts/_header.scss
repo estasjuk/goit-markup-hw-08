@@ -1,5 +1,9 @@
 .head-container {
-  @include flex(flex, null, null, null);
+  @include flex(flex, space-between, center, null);
+
+  @media screen and (min-width: 1200px) {
+    @include flex(flex, space-between, baseline, 0);
+  }
 }
 
 .head-section {

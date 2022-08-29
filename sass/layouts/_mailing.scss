@@ -9,6 +9,11 @@
   flex-direction: column;
   @include form(100%, null, null);
 
+  @media screen and (min-width: 1170px) {
+    @include flex(flex, null, flex-start, 12px);
+    flex-direction: row;
+  }
+
   &__input {
     @include form(100%, 50px, 4px);
     padding: 15px;
@@ -24,7 +29,7 @@
       @include form(450px, 50px, 4px);
     }
 
-    @media screen and (min-width: 1140px) {
+    @media screen and (min-width: 1200px) {
       @include form(358px, 50px, 4px);
     }
 
