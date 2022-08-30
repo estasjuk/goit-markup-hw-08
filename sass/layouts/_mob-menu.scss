@@ -28,25 +28,23 @@
     }
   }
 
-  [aria-current] {
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -1px;
-      left: 0;
-      @include form(100%, 4px, 2px);
-      background-color: var(--active-hover-focus-current);
-    }
-
-    color: var(--active-hover-focus-current);
-  }
-
   &__link {
     position: relative;
     @include fonts(500, 40px, 1.18, 0.02em, var(--title-color), center);
     text-decoration: none;
 
-    &:active,
+    &--current {
+      color: var(--active-hover-focus-current);
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        @include form(100%, 4px, 2px);
+        background-color: var(--active-hover-focus-current);
+      }
+    }
+
     &:hover,
     &:focus {
       color: var(--active-hover-focus-current);

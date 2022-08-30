@@ -20,12 +20,13 @@
       padding-top: 2px;
       padding-bottom: 2px;
       text-decoration: none;
-      @include fonts(500, 14px, 1.14, 0.02em, var(--text-color), null);
+      @include fonts(500, 12px, 1.17, 0.02em, var(--text-color), null);
       @include animation(color, null, null, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
     }
     @media screen and(min-width: 1200px) {
       padding-top: 32px;
       padding-bottom: 32px;
+      @include fonts(500, 14px, 1.14, 0.02em, var(--text-color), null);
     }
     &:hover,
     &:focus {
@@ -36,5 +37,17 @@
   .nav-contacts__icon {
     fill: currentColor;
     margin-right: 10px;
+
+    @media screen and(min-width: 1200px) {
+      &--mail {
+        width: 16px;
+        height: 12px;
+      }
+
+      &--tel {
+        width: 16px;
+        height: 12px;
+      }
+    }
   }
 }
