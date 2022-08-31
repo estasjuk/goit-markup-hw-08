@@ -5,57 +5,54 @@
 }
 
 .foot-container {
-  @include flex(flex, space-around, center, 60px);
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
   padding-left: 15px;
   padding-right: 15px;
 
-  &--left,
-  &--middle,
-  &--right {
-    @include flex(flex, start, center, 20px);
-    flex-direction: column;
-    @include form(100%, null, null);
+  &--left {
+    margin-bottom: 60px;
+  }
+
+  &--middle {
+    margin-bottom: 60px;
   }
 
   @media screen and (min-width: 768px) {
     @include flex(flex, null, baseline, 0px);
-    flex-direction: row;
     flex-wrap: wrap;
 
     &--left,
     &--middle {
       @include form(50%, null, null);
+      margin-bottom: 0;
     }
 
     &--right {
+      margin-left: auto;
+      margin-right: auto;
       margin-top: 60px;
     }
   }
 
   @media screen and (min-width: 1200px) {
     @include flex(flex, null, baseline, null);
-    flex-direction: row;
     flex-wrap: nowrap;
     margin-left: auto;
     margin-right: auto;
-
-    &--right {
-      margin-top: 0;
-    }
 
     &--left,
     &--middle,
     &--right {
       @include flex(flex, start, flex-start, 20px);
+      flex-direction: column;
       @include form(auto, null, null);
+    }
+
+    &--right {
+      margin-top: 0;
     }
 
     &--left {
       flex-grow: 1;
-      margin-top: 0;
     }
 
     &--middle {

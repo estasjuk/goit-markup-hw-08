@@ -1,6 +1,8 @@
 .join {
   display: block;
+  margin-bottom: 20px;
   text-transform: uppercase;
+  text-align: center;
   @include fonts(700, 14px, 1.14, 0.03em, var(--sec-text-color), null);
 }
 

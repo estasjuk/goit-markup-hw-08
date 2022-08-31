@@ -1,21 +1,26 @@
 .mailing {
   display: block;
+  margin-bottom: 20px;
   @include fonts(700, 14px, 1.14, 0.03em, var(--sec-text-color), center);
   text-transform: uppercase;
 }
 
+.mailing-wrap {
+  margin: 0 auto;
+}
+
 .mailing-form {
-  @include flex(flex, start, center, 20px);
-  flex-direction: column;
+  // @include flex(flex, start, center, 20px);
+  // flex-direction: column;
   @include form(100%, null, null);
 
-  @media screen and (min-width: 1170px) {
+  @media screen and (min-width: 1200px) {
     @include flex(flex, null, flex-start, 12px);
-    flex-direction: row;
   }
 
   &__input {
     @include form(100%, 50px, 4px);
+    margin-bottom: 20px;
     padding: 15px;
     background-color: #2f303a;
     font-style: normal;

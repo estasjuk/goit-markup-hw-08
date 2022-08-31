@@ -1,7 +1,7 @@
 .footer-contacts {
   font-style: normal;
 
-  &__item {
+  &__item:not(:last-child) {
     margin-bottom: 9px;
   }
 
