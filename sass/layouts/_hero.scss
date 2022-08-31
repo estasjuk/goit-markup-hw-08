@@ -4,7 +4,7 @@
   height: 400px;
   background-color: var(--background-footer-hero);
   text-align: center;
-  padding: 118px 60px;
+  padding: 118px 0;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero-bg-mobile.jpg);
   background-repeat: no-repeat;
@@ -27,6 +27,8 @@
   }
 
   @media screen and (min-width: 1200px) {
+    height: 600px;
+    padding: 200px 0;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/hero-bg.jpg);
 
