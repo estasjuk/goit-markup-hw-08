@@ -13,6 +13,9 @@
 }
 
 .conditions__link {
+  @media screen and(max-width: 450px) {
+    display: inline-block;
+  }
   color: var(--active-hover-focus-current);
   @include animation(color, null, null, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
 
@@ -47,3 +50,9 @@
 .conditions__checkbox:checked + .conditions__label .custom-checkbox__icon {
   fill: #ffffff;
 }
+
+// .conditions__label {
+//   @media screen and(max-width: 450px) {
+//     display: inline-block;
+//   }
+// }
